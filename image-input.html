@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(219, 216, 216);
+            padding: 33px
+        }
+        form{
+            background-color: white;
+            margin-top: 8%;
+            padding: 33px;
+            width: 30%;
+
+        }
+        form img{
+            width:20%;
+            margin-left: 40%;
+            margin-bottom: 30px;
+        }
+      h2{
+        text-align: center;
+        font-family: sans-serif;
+        margin-bottom: 20px;
+        color:rgb(38, 174, 184);
+        font-weight: lighter;
+      }
+        input{
+            padding: 8px;
+            margin-top: 10px;
+            border-color: rgb(38, 174, 184);
+            width:100%;
+            outline: none;
+        }
+        .welcome{
+            background-color: rgb(219, 216, 216);
+            padding: 20px;
+        }
+        .pass{
+            margin-top: 10px;
+            margin-left: 65.5%;
+            color:rgb(38, 174, 184);
+        }
+        #pass{
+            margin-top: 0;
+            margin-bottom: 1px;
+        }
+        .dont{
+            margin-bottom: 10px;
+            color: rgb(38, 174, 184);
+        }
+        button{
+            padding:8px;
+            width:100%;
+            font-size: 15px;
+           transition: 0.5s;
+        }
+        button:hover{
+            scale:1.1
+        }
+        .error{
+            color:red;
+            background-color: #fde8ec;
+            padding: 10px;
+            font-size: 14px;
+        }
+        #error1{
+            color: red;
+            text-align: start;
+}
+#error2{
+            color: red;
+            text-align: start;
+}
+        @media screen and (max-width:750px){
+            form{
+                width:100%;
+            }
+            form img{
+                width: 35%;
+                margin-left: 30%;
+            }
+            h2{
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .pass{
+                margin-left: 100px;
+                margin: top 20px; ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="post"  class="forma" enctype="multipart/form-data">
+        <div >
+            <img src="icon/hospital.png">
+            <h2>Log In To Your Account</h2>
+            <p class="welcome" id="welcome">Welcome</p>
+            <input type="text" name="uname" placeholder="Username" id="username">
+        <div id="error1"></div>
+            
+            <p class="pass">Forgot password</p>
+            <input type = "file" name="file">
+            <div id="error2"></div>
+            <p class="dont">I don't have an account</p>
+            <button name = "submit" id="button">Log in</button>
+        </div>
+        
+    </form>

@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    padding: 0;
+    background-color: rgb(242, 243, 252);
+}
+header{
+    background:linear-gradient( rgb(38, 174, 184), pink);
+    width: 16%;
+    margin-top: 0;
+    color: white;
+    position: fixed;
+    height: 120vh;
+    
+}
+header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    
+}
+header  .img{
+    display: flex;
+    margin-bottom: -20px;
+    padding-right: 10px;
+    margin-top: 20px;
+    padding-left: 20px;
+
+   
+}
+.img span{
+    margin-top: 5px;
+    padding-left: 5px;
+}
+header .id{
+    margin-top: 15px;
+}
+header
+.flexicon{
+    display: inline-flex;
+    margin-top: 25px;
+    margin-left: -1px;
+    padding: 13PX;
+    width: 100%;
+
+}
+/* .flexicon:nth-child(2){
+    border-left: 3px solid white; */
+
+.icon{
+    width: 15px;
+    height: 15px;
+
+}
+ul li{
+    list-style: none;
+    padding-left: 10px;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+.flexicon:hover{
+    background-color: rgb(40, 41, 41);
+    border-left: 3px solid rgb(66, 65, 65);
+    transition: 0.5s;
+       color: rgb(255, 253, 253);
+       border-left: 3px solid white;
+}
+
+
+
+/* APPOINTMENT CSS */
+.title-page{
+    background-image: linear-gradient(rgba(29, 10, 10, 0.6), rgba(2,2,2,0.5)), url("icon/appointment.jpg");
+    height: 40vh;
+    width: 1150px;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+ .week-schedule{
+    background-color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 30px 20px 20px 30px;
+    padding: 33px;
+    display: flex;
+    justify-content: space-around;
+ }
+ .week-schedule p{
+    font-size: 15px;
+    
+ }
+ .week-schedule p:nth-child(1){
+    color: rgb(38, 174, 184);
+    margin-bottom: 10px;
+ }
+ .week{
+    border-right: 1px solid grey;
+    padding-right: 30px;
+    width: 50%;
+ }
+.available{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between; 
+margin: 0px 20px 0px 30px ;
+background-color: white;
+border-radius: 10px;
+padding: 20px;
+
+}
+.available-con{
+box-shadow: 0px 0px 20px 0px rgba(173, 169, 169, 0.6);
+padding: 20px;
+border-radius: 10px;
+margin-top: 10px;
+text-align: center
+;
+}
+.available-con p{
+color: gray;
+font-family: sans-serif;
+font-weight: 400;
+}
+.available-con h2{
+font-family:Arial, Helvetica, sans-serif;
+font-weight: lighter;
+}
+.available-con button{
+margin-top: 10px;
+padding: 6px;
+width: 100px;
+background-color: rgb(38, 174, 184);
+color: white;
+border: none;
+border-radius: 20px;
+}
+section{
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 14.5vw;
+}
+form{
+background-color:rgba(0,0,0,0.6) ;
+height: 160vh;
+width: 100%;
+position: absolute;
+align-items: center;
+justify-content: center;
+display: none;
+}
+.form-con img{
+width: 20px;
+height: 20px;
+margin-left: 270px;
+padding-top: -300px;
+}
+.form-con{
+width: 25%;
+padding: 33px;
+background-color: white;
+border-radius: 10px;
+}
+input{
+padding: 10px;
+margin: 5px 5px;
+border-radius: 10px;
+border-color: rgb(38, 174, 184);
+outline: rgb(38, 174, 184);
+width: 97%;
+}
+
+.sel{
+    padding: 10px;
+margin: 5px 5px;
+border-radius: 10px;
+border-color: rgb(38, 174, 184);
+outline: rgb(241, 33, 33);
+width: 97%;
+}
+.form-con button{
+border-radius: 10px;
+padding: 10px;
+width: 100%;
+border: none;
+background-color: rgb(38, 174, 184);
+color: white;
+font-size: 16px;
+}
+
+.form22 {
+    margin-top: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height : 100%;
+    width : 100%;
+    padding-bottom: 10px;
+    display : block;
+    position: static;
+    background-color: inherit;
+}
+#button{
+    border: none;
+    padding: 10px;
+}
+
+/* dashboard css */
+.card{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin:30px;
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card-con{
+    width: 250px;
+    height: 20%;
+    background-color: rgb(38, 174, 184);
+    border-radius: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.6s;
+}
+.card-con:hover{
+    scale: 1.1;
+}
+.card-con a{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 5%;
+}
+.card-con a, img{
+    width: 30%;
+    height: 10%;
+    text-decoration: none;
+}
+.card-con a img{
+width: 120%;
+}
+.card-con a P{
+    font-size: 20px;
+    color: white;
+    padding-left: 30PX;
+    text-align: center;
+    padding-top: 10PX;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card-con:nth-child(2){
+    background-color: rgb(252, 79, 79);
+}
+.card-con:nth-child(3){
+    background-color: rgb(247, 117, 10);
+}
+.head p{
+    padding: 22px;
+    font-weight: 700;
+    width: 100%;
+}
+hr{
+    width: 100%;
+}
+.head span{
+  color: gray;
+}
+.pending{
+    width: 100%;
+    height:65vh;
+    box-shadow: 0px 0px 22px 1px rgb(216, 203, 203);
+    margin-left: 20px;
+    width: 98%;
+    
+}
+.form22 a{
+    text-decoration: none;
+    margin-top: 10px;
+
+}
+
+.Pending {
+    background : rgb(240, 76, 76);
+    color : white;
+    padding : 8px 12px;
+    border: none;
+}
+
+.Approved {
+    background : rgb(47, 219, 76);
+    color : white;
+    padding : 8px 12px;
+    border: none;
+}
+
+table{
+    width:100%;
+    font-family: sans-serif;
+    margin: 10px;
+    width: 98%;
+    border: none;
+}
+table th, td{
+    border: 0.1px ridge rgb(194, 193, 193);
+    text-align: start;
+    border-spacing: 0px;
+}
+
+th{
+    padding: 5px;
+    font-size: 15px;
+    color: rgb(22, 19, 19);
+    width: 200px;
+}
+ td{
+    border: none;
+    padding-left: 1px;
+    width: 500px;
+    font-size: 15px;
+    max-height: 42px;
+ }
+ tr:nth-child(2){
+    background-color: rgb(238, 220, 220);
+ }
+ tr:nth-child(4){
+    background-color: rgb(235, 225, 225);
+ }
+ tr:nth-child(6){
+    background-color: rgb(252, 228, 228);
+ }
+ td:nth-child(8)
+ p{
+    background-color: rgb(226, 89, 55);
+    color: white;
+    border-radius: 20px;
+    padding: 6px;
+ }
+ @media screen and (max-width:750px){
+    .pending{
+        margin-bottom: 0;
+    }
+    header{
+        display: block;
+        
+    }
+    .card{
+        display:flex;
+        padding: 12px;
+    }
+    .card-con{
+        margin-top: 12px;
+    }
+    table{
+        width: 100%;
+    }
+    #nav{
+        display: block;
+    }
+}
+@media screen and (max-width:750px){
+    body{
+        padding: 0;
+    }
+    header{
+        display: none;
+        
+    }
+    .title-page {
+        width: 100%;
+        font-size:xx-small;
+    }
+    .title-page h2 {
+        font-size: 15px;
+    }
+    .title p{
+        font-size: xx-small;
+        text-align: start;
+        padding-left: 10px;
+    }
+    .week{
+        margin-top: 10px;
+        width: 100%;
+     }
+    .week-schedule{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        border: none;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: small;
+    }
+    .available{
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .available-con{
+        margin: 15px;
+    }
+    section{
+        margin-left:3px;
+    }
+    form{
+        padding: 40px;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+    .form-con{
+        width: 100%;
+    }
+    .form-con img{
+        width: 20px;
+        height: 20px;
+        margin-left: 220px;
+        padding-top: -300px;
+        }
+    .forma{
+        width: 100%;
+    }
+}
+
