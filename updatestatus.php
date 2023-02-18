@@ -1,5 +1,4 @@
 <?php
-session_start();
 $pid = $_GET['pid'];
 
 $con = mysqli_connect("localhost", "root", "", "keepfit");
@@ -10,6 +9,6 @@ if($con){
 
 $_SESSION['msg']= "appoiontement approved";
 
-header("Location:admindashboard.php");
+header("Location:adminappointment.php");
 
 ?>

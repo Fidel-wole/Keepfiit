@@ -18,7 +18,7 @@
     $con = mysqli_connect("localhost", "root", "", "keepfit");
 if($con){
     
-    $sql = "SELECT * FROM `users` Where users.id = " . $_SESSION['id'];
+    $sql = "SELECT * FROM `users`INNER JOIN users_medkit ON users.Patient_id = users_medkit.Patient_id Where users.id = " . $_SESSION['id'];
     $result = $con->query($sql);
     if ($result->num_rows == 1){
         $userdetails = $result->fetch_assoc();
@@ -40,6 +40,7 @@ if($con){
            
             <div class="flexicon"><img src="icon/deadline.png" class="icon"> <li><a href="appointment.php">Appointment</a></li></div>
             <div class="flexicon"><img src="icon/checked.png" class="icon"> <li><a href="patient-report.php">Record</a></li></div>
+            
             <div class="flexicon"><img src="icon/database.png" class="icon"> <li style="list-style: none; padding-left:10px ;"><a href = "">View Doctors</a></li></div>
             <div class="flexicon"><img src="icon/log-out.png" class="icon"> <li style="list-style: none; padding-left:10px ;" id="log">Log out</li></div>
         </ul>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     $con = mysqli_connect("localhost", "root", "", "keepfit");
 if($con){
     
-    $sql = "SELECT * FROM `users` Where users.id = " . $_SESSION['id'];
+    $sql = "SELECT * FROM `users`INNER JOIN users_medkit ON users.Patient_id = users_medkit.Patient_id Where users.id = " . $_SESSION['id']."";
     $result = $con->query($sql);
     if ($result->num_rows == 1){
         $userdetails = $result->fetch_assoc();
@@ -33,14 +34,15 @@ if($con){
 } ?>
    </div>
    <div class="id">
-   <span style="margin-left: 25%; padding:20px;">ID: <?php echo" ". $userdetails['Patient_id'] ." "?></span><br>
+   <span style="margin-left: 25%; padding:20px;">ID: <?php echo  $userdetails['Patient_id'] ?></span><br>
 </div>     
    <ul>
             <div class="flexicon"><img src="icon/database.png" class="icon"> <li><a href="admindashboard.php">Dashboard</a></li></div>
            
-            <div class="flexicon"><img src="icon/deadline.png" class="icon"> <li><a href="">Appointments</a></li></div>
+            <div class="flexicon"><img src="icon/deadline.png" class="icon"> <li><a href="adminappointment.php">Appointments</a></li></div>
+            <div class="flexicon"><img src="icon/checked.png" class="icon"> <li><a href="adminprofile.php">Profile</a></li></div>
             <div class="flexicon"><img src="icon/checked.png" class="icon"> <li><a href="adminpatient.php">View Patients</a></li></div>
-            <div class="flexicon"><img src="icon/database.png" class="icon"> <li style="list-style: none; padding-left:10px ;"><a href = "register.php">Register Patient</a></li></div>
+            <div class="flexicon"><img src="icon/database.png" class="icon"> <li style="list-style: none; padding-left:10px ;"><a href = "registerpatient.php">Register Patient</a></li></div>
             <div class="flexicon"><img src="icon/log-out.png" class="icon"> <li style="list-style: none; padding-left:10px ;" id="log">Log out</li></div>
         </ul>
     </header>

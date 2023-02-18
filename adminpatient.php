@@ -11,11 +11,15 @@
                background-color: white;
             }
             .header{
+                margin-left: 25px;
                 background-color: white;
                 width: 85vw;
                 display: flex;justify-content: space-around;
                 border-bottom: 1px solid grey;
                 padding-bottom: 10px;
+                position: fixed;
+                z-index: 99;
+                max-height: 7vh;
             }
             .Search
             {
@@ -36,13 +40,13 @@
             }
             .image img{
                 border-radius: 100%;
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
             }
             .image h2{
               color: grey;
               font-size: 18px;
-              padding-top: 15px;
+              padding-top: 12px;
               padding-left: 6px;  
             }
             #button{
@@ -67,7 +71,7 @@
 <h2><?php echo "".$userdetails["Username"]."";?></h2>
 </div>
 </div>
-<h3 style="font-family:sans-serif; color: gray; padding: 30px;">Patient Management</h3>
+<h3 style="font-family:sans-serif; color: gray; padding: 30px; padding-top:70px;">Patient Management</h3>
    <div class="pending">
     <p style="padding: 17px; color:rgb(111, 111, 247); font-weight:bold;font-family: sans-serif; background-color:rgb(242, 244, 252);">Patient List</p>
     <table style="margin-left: 1%;">
@@ -86,12 +90,13 @@
     $con = mysqli_connect("localhost", "root", "", "Keepfit");
     if($con){
 
-$sql = "SELECT * FROM users ";
+$sql = "SELECT * FROM users";
 $result =$con->query($sql);
     
 if ($result->num_rows > 0){
     $n = 1;
     while($row = $result->fetch_assoc()){
+        if($row["Usertype"] == "user"){
         echo '
         <tr>
         <td style="text-align:center;">'.$n.'</td>
@@ -102,15 +107,16 @@ if ($result->num_rows > 0){
         <td>'.$row["Phone_number"].'</td>
         <td>'.$row["Address"].'</td>
         <td><form class = "form22">
-            <button type = "submit"  style="background-color:green; color:white;" id="button" >View</button>
+            <a href="viewpatient.php?pid='.$row["Patient_id"].'"style="padding:5px; margin-left:30px;background-color:green; color:white;" id="but" >View</a>
         </form> </td>
         <td><form class = "form22" >
-        <button type = "submit"  style="background-color:red; color:white;" id="button">Delete</button>
+        <a href="deletepatient.php?pid='.$row["Patient_id"].'"  style="padding:5px; margin-left:20px; background-color:red; color:white;"  id="but">Delete</a>
     </form> </td>
     </tr>
         ';
         $n++;
     }
+}
 }
     }
     

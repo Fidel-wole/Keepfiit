@@ -52,6 +52,7 @@
                 margin-top: 20px;
                 display: flex;
              }
+                 
             .profileimg img{
                 border-radius: 200px;
                 width: 150px;
@@ -97,7 +98,7 @@
 </head>
 <body>
     <?php
-    include("header.php")
+    include("adminheader.php")
     ?>
         <section class="section">
             <div class="header">
@@ -111,14 +112,14 @@
 </div>
             </div>
             <div class="record">
-            <p style="font-weight: bold; font-family:sans-serif;">Your record's</p>
+            <p style="font-weight: bold; font-family:sans-serif;">Your Profile</p>
              <div class="patient-info">
                 <div class="profileimg">
                 <img src = "icon/images (35).jpeg">
         </div>
         <div class="name">
-                 <h3 style="font-weight: bolder ;">Patient</h3> 
-                 <p style="font-size: 20px;"><?php echo "Miss ".$userdetails["Full_name"]."" ?></p>
+                 <h3 style="font-weight: bolder ;">Doctor</h3> 
+                 <p style="font-size: 20px;"><?php echo "Dr. ".$userdetails["Full_name"]."" ?></p>
                   <button>View Profile</button>
                  </div>  
                  <ul class="list">
@@ -126,9 +127,10 @@
                     echo $userdetails["Gender"];
                     ?></span><li>
                     <li>Age:<span>
-                        <?php
+                    <?php
                     echo $userdetails["Age"];
-                    ?></span><li>
+                    ?>
+                        </span><li>
                     <li>Blood:<span><?php
                     echo $userdetails["Blood_type"];
                     ?></span><li>
@@ -138,9 +140,11 @@
                  </ul>
                  <ul class="list">
                     <li>Check-in:<span>15 Feb 2023</span><li>
-                    <li>Ailment:<span><?php
+                    <li>Ailment:<span>
+                    <?php
                     echo $userdetails["Ailment"];
-                    ?></span><li>
+                    ?>
+                    </span><li>
                     <li>Height<span><?php
                     echo $userdetails["Height"];
                     ?></span><li>
