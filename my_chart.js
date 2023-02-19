@@ -4,10 +4,18 @@
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Surgery', 'Anatomy', 'Manicure', 'Death', 'Sick', 'thinking'],
+      labels: ['Surgery', 'Antomy', 'Manicure', 'Death', 'Sick', 'thinking'],
       datasets: [{
         label: 'Number of Patients in departments',
         data: [12, 19, 3, 5, 2, 3],
+        backgroundColor:[
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(54, 99, 132, 0.9)',
+          'rgba(255, 206, 82, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(255, 99, 222, 0.9)',
+          'rgba(255, 99, 132, 0.9)'
+        ],
         borderWidth: 1
       }]
     },
@@ -25,6 +33,14 @@
       datasets: [{
         label: 'Number of Patients in departments',
         data: [12, 19, 3, 5, 2, 3],
+        backgroundColor:[
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(54, 99, 132, 0.9)',
+          'rgba(255, 206, 82, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(255, 99, 222, 0.9)',
+          'rgba(255, 99, 132, 0.9)'
+        ],
         borderWidth: 1
       }]
     },
@@ -33,3 +49,52 @@
     }
   });
 
+  const sctx = document.getElementById('line');
+
+  new Chart(sctx, {
+    type: 'line',
+    data: {
+      labels: ['Surgery', 'Antomy', 'Manicure', 'Death', 'Sick', 'thinking'],
+      datasets: [{
+        label: 'Number of Patients in departments',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor:[
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(54, 99, 132, 0.9)',
+          'rgba(255, 206, 82, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(255, 99, 222, 0.9)',
+          'rgba(255, 99, 132, 0.9)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true
+    }
+  });
+
+
+  const ssctx = document.getElementById('dough');
+  new Chart(ssctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Surgery', 'Antomy', 'Manicure', 'Death', 'Sick', 'thinking'],
+      datasets: [{
+        label: 'Number of Patients in departments',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor:[
+          'rgba(255, 99, 132, 0.9)',
+          'rgba(54, 99, 132, 0.9)',
+          'rgba(255, 206, 82, 0.9)',
+          'rgba(75, 192, 192, 0.9)',
+          'rgba(255, 99, 222, 0.9)',
+          'rgba(255, 99, 132, 0.9)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true
+    }
+  });

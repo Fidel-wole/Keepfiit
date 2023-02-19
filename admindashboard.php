@@ -9,7 +9,7 @@
     <style>
         #style{
             width: 50%;
-            box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.3);
+            box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.1);
             margin-left: 30px;
             border-radius: 20px;
             height: 50vh;
@@ -20,6 +20,18 @@
         }
         .flex{
             display: flex;
+        }
+        #line2{
+            display: flex;
+            justify-content: space-around;
+            margin-left: 30px;
+            width: 100%;
+            height: 30%;
+            margin-top: 5%;
+            box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.1);
+        }
+        #line{
+            width: 100%;
         }
         </style>
 </head>
@@ -57,6 +69,10 @@
 <div id="style">
 <canvas id="polar"></canvas>
     </div>
+    </div>
+    <div id="line2">
+    <canvas id="line"></canvas>
+    <canvas id="dough"></canvas>
     </div>
     </section>
         <script src="path/to/chartjs/dist/chart.umd.js"></script>
