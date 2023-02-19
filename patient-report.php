@@ -93,6 +93,22 @@
                 color: black;
                 padding-left: 7px;
             }
+            #style{
+            width: 50%;
+            box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.1);
+            margin-left: 30px;
+            border-radius: 20px;
+            height: 50vh;
+            margin-top: 30px;
+            
+        }
+        #style:nth-child(2){
+            width: 40%;
+            height: 50vh;
+        }
+        .flex{
+            display: flex;
+        }
             </style>
 </head>
 <body>
@@ -147,6 +163,16 @@
 
                  </ul>
         </div>
+        <div class="flex">
+        <div id="style">
+  <canvas id="myChart"></canvas>
+</div>
+<div id="style">
+<canvas id="polar"></canvas>
+    </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script src="patientchart.js"></script>
 </body>
 </html>

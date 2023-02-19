@@ -54,7 +54,7 @@
   new Chart(sctx, {
     type: 'line',
     data: {
-      labels: ['Surgery', 'Antomy', 'Manicure', 'Death', 'Sick', 'thinking'],
+      labels: ['Surgery', 'Anatomy', 'Manicure', 'Death', 'Sick', 'thinking'],
       datasets: [{
         label: 'Number of Patients in departments',
         data: [12, 19, 3, 5, 2, 3],
