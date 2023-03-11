@@ -62,7 +62,7 @@ ul li{
     padding-left: 10px;
     cursor: pointer;
 }
-ul li a{
+a{
     text-decoration: none;
     color: white;
 }
@@ -280,11 +280,11 @@ hr{
   color: gray;
 }
 .pending{
-    width: 100%;
-    height:65vh;
+    width: 98%;
+    height:80%;
     box-shadow: 0px 0px 22px 1px rgb(216, 203, 203);
     margin-left: 20px;
-    width: 98%;
+  
     
 }
 .form22 a{
@@ -327,10 +327,8 @@ th{
     width: 200px;
 }
  td{
-    border-top: 1px solid rgb(207, 200, 200);
-    border-left: none;
-    border-right: none;
-    padding-left: 1px;
+
+    padding-left: 5px;
     width: 500px;
     font-size: 15px;
     max-height: 42px;
@@ -345,7 +343,9 @@ th{
     color: white;
     border-radius: 20px;
     padding: 6px;
+    
  }
+ 
  @media screen and (max-width:750px){
     .pending{
         margin-bottom: 0;
@@ -356,18 +356,21 @@ th{
     }
     .card{
         display:flex;
-        flex-wrap: wrap;
+        padding-right: 40px;
         padding: 12px;
+        margin-left: 0;
     }
     .card-con{
         margin-top: 12px;
-        width: 35%;
         height:15vh;
         text-align: center;
     }
     .card-con a, img{
-        width: 40%;
-        height: 80%;
+        width: 30%;
+        height: 100%;
+    }
+    .card-con a p{
+        padding-left: 10px;
     }
     table{
         width: 100%;
@@ -383,6 +386,9 @@ th{
     header{
         display: none;
         
+    }
+    hr{
+        width: 150%;
     }
     .title-page {
         width: 100%;

@@ -182,7 +182,7 @@ require("script.php")
             }
             .pass{
                 font-size: smaller;
-                margin-left: 200px;
+                margin-left: 160px;
                 margin-top: 20px; ;
             }
         }
@@ -246,14 +246,14 @@ loader.style.display="none"})
             var pass = document.getElementById("pass").value;
         if(username == ""){
             document.getElementById("error1").innerHTML = "Username Required";
-            event.preventDefault(onsubmit)
+            event.preventDefault(onclick)
         }else{
             document.getElementById("welcome").textContent = "Welcome " + username;
             document.getElementById("error1").innerHTML = "";
         }
         if(pass == ""){
             document.getElementById("error2").innerHTML = "Password Required";
-            event.preventDefault(onsubmit)
+            event.preventDefault(onclick)
         }else{
             document.getElementById("error2").innerHTML = "";
         }

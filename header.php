@@ -36,13 +36,13 @@ if($con){
    <span style="margin-left: 25%; padding:20px;">ID: <?php echo" ". $userdetails['Patient_id'] ." "?></span><br>
 </div>     
    <ul>
-            <div class="flexicon"><img src="icon/database.png" class="icon"> <li><a href="dashboarrd.php">Dashboard</a></li></div>
+   <a href="dashboarrd.php"><div class="flexicon"><img src="icon/database.png" class="icon"> <li>Dashboard</li></div></a>
            
-            <div class="flexicon"><img src="icon/deadline.png" class="icon"> <li><a href="appointment.php">Appointment</a></li></div>
-            <div class="flexicon"><img src="icon/checked.png" class="icon"> <li><a href="patient-report.php">Record</a></li></div>
+   <a href="appointment.php"><div class="flexicon"><img src="icon/deadline.png" class="icon"> <li>Appointment</li></div></a>
+   <a href="patient-report.php"><div class="flexicon"><img src="icon/checked.png" class="icon"> <li>Profile</li></div></a>
             
             <div class="flexicon"><img src="icon/database.png" class="icon"> <li style="list-style: none; padding-left:10px ;"><a href = "">View Doctors</a></li></div>
-            <div class="flexicon"><img src="icon/log-out.png" class="icon"> <li style="list-style: none; padding-left:10px ;" id="log">Log out</li></div>
+            <div class="flexicon" id="log"><img src="icon/log-out.png" class="icon"> <li style="list-style: none; padding-left:10px ;">Log out</li></div>
         </ul>
     </header>
     <script>

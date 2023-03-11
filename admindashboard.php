@@ -14,12 +14,27 @@
             border-radius: 20px;
             height: 50vh;
         }
+        @media screen {
+            #style{
+                width: 100%;
+            }
+        }
         #style:nth-child(2){
             width: 40%;
             height: 50vh;
         }
+        @media screen {
+            #style:nth-child(2){
+                width: 100%;
+            }
+        }
         .flex{
             display: flex;
+        }
+        @media screen and (max-width:750px) {
+            .flex{
+                display: block;
+            }
         }
         #line2{
             display: flex;

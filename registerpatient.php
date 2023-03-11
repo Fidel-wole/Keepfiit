@@ -65,7 +65,7 @@ ul li{
     padding-left: 10px;
     cursor: pointer;
 }
-ul li a{
+ul a{
     text-decoration: none;
     color: white;
 }
@@ -117,19 +117,19 @@ ul li a{
             border-right:1px solid grey;
             padding-right: 50px;
         }
-        .error{
+        #error{
             color:red;
-            background-color: #fde8ec;
-            padding: 10px;
+            padding: 0px;
+            padding-bottom: 0;
             display: none;
             font-size: 14px;
         }
     </style>
-        <?php
+        <!-- <?php
         if ($password_error != null){
        ?><style>.error{display: block;}</style><?php
        
-       } ?>
+       } ?> -->
 </head>
 <body>
 <header id="navbar">
@@ -158,14 +158,15 @@ ul li a{
         <div class="id">
         <span style="margin-left: 25%; padding:20px;">ID: <?php echo" ". $userdetails['Patient_id'] ." "?></span><br>
      </div>     
-        <ul>
-                 <div class="flexicon"><img src="icon/database.png" class="icon"> <li><a href="admindashboard.php">Dashboard</a></li></div>
-                
-                 <div class="flexicon"><img src="icon/deadline.png" class="icon"> <li><a href="adminappointment.php">Appointments</a></li></div>
-                 <div class="flexicon"><img src="icon/checked.png" class="icon"> <li><a href="adminpatient.php">View Patients</a></li></div>
-                 <div class="flexicon"><img src="icon/database.png" class="icon"> <li style="list-style: none; padding-left:10px ;"><a href = "registerpatient.php">Register Patient</a></li></div>
-                 <div class="flexicon"><img src="icon/log-out.png" class="icon"> <li style="list-style: none; padding-left:10px ;" id="log">Log out</li></div>
-                </ul>
+     <ul>
+   <a href="admindashboard.php"><div class="flexicon"><img src="icon/database.png" class="icon"><li>Dashboard</li></div></a>
+           
+   <a href="adminappointment.php"><div class="flexicon"><img src="icon/deadline.png" class="icon"> <li>Appointments</li></div></a>
+            <a href="adminprofile.php"> <div class="flexicon"><img src="icon/checked.png" class="icon"><li>Profile</li></div></a>
+            <a href="adminpatient.php"><div class="flexicon"><img src="icon/checked.png" class="icon"> <li>View Patients</li></div></a>
+            <a href = "registerpatient.php"<div class="flexicon"><img src="icon/database.png" class="icon"> <li style="list-style: none; padding-left:10px ;">Register Patient</li></div></a>
+            <div class="flexicon" id="log"><img src="icon/log-out.png" class="icon"> <li style="list-style: none; padding-left:10px ;">Log out</li></div>
+        </ul>
          </header>
          <script>
              document.getElementById("log").addEventListener("click", function(){
@@ -182,7 +183,7 @@ ul li a{
         if(isset($_SESSION["mesg"])){
         echo $_SESSION["mesg"];}
         ?>
-                <form class="form" action="check-signup.php" method="post" >
+                <form class="form" action="check-signup.php"  method="post" onsubmit="form()" >
                     <div class="form-con">
                         <p>Fill in the user details below  </p>
                         <input type="text" placeholder="Fullname" name = "fname" required><p>
@@ -190,12 +191,12 @@ ul li a{
                         <input type="number" placeholder="Phone number" name="phone" id="phone"><p>
                             <div id="error"></div>
                         <input type= "date"  placeholder="Date of birth" name = "dob"><p></p>
-                        <input type="number" placeholder="Age" name="age"><p></p>
+                        <input type="number" placeholder="Age" name="age" id="age"><p></p>
                         <label>Gender</label>
                         <input type="radio" value ="Male" name="gender">Male
                         <input type="radio" value="Female" name="gender">Female<p></p>
-                        <input type = "text" placeholder="Address" name="address"><p></p>
-                        <button name="submit" onclick="form()">Next</button>
+                        <input type = "text" placeholder="Address" name="address" id="add"><p></p>
+                        <button name="submit">Next</button>
                     </div>
                     <div class="form-con">
                         <p>Fill in user Medical Information</p>
@@ -213,20 +214,25 @@ ul li a{
                         <label>Usertype<label>
                             <input type="radio" value="user" name="usertype">User
                             <input type="radio" value="admin" name="usertype">Admin
-                            <p class="error"><?php
+                            <!-- <p class="error"><?php
             echo $password_error;
-            ?></p>
+            ?></p> -->
                     </div>
             </form>
     </section>
     <script>
         function form(){
-        var phone = document.getElementsById("phone").value;
+        var phone = document.getElementById("phone").value;
+        var age = document.getElementById("age").value;
+        var add = document.getElementById("add").value;
         if(phone.length < 11){
-            document.getElementById("error").innerHTML="Phone number cannot be lesser or greater than 11";
-            event.prevenrDefault(onkeyup);
-        }else{
-            document.getElementById("error").innerHTML ="";
+             document.getElementById("error").innerHTML="Phone number invalid";
+             document.getElementById("error").style.display="block";
+             event.preventDefault(onsubmit);
+        }
+        if( add == ""){
+            alert("fill all");
+            event.preventDefault(onsubmit);
         }
     }
         </script>

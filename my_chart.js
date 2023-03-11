@@ -1,4 +1,10 @@
 
+var Surgery = 40
+var anatomy = 45
+var Manicure = 8
+var death = 30
+Sick = 60
+think =45
   const ctx = document.getElementById('myChart');
 
   new Chart(ctx, {
@@ -7,7 +13,7 @@
       labels: ['Surgery', 'Antomy', 'Manicure', 'Death', 'Sick', 'thinking'],
       datasets: [{
         label: 'Number of Patients in departments',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [Surgery, anatomy, Manicure, death, Sick, think ],
         backgroundColor:[
           'rgba(255, 99, 132, 0.9)',
           'rgba(54, 99, 132, 0.9)',

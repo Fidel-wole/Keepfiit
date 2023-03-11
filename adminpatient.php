@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <style>
         .section{
                 margin-left: 16%;
@@ -109,9 +111,9 @@ if ($result->num_rows > 0){
         <td><form class = "form22">
             <a href="viewpatient.php?pid='.$row["Patient_id"].'"style="padding:5px; margin-left:30px;background-color:green; color:white;" id="but" >View</a>
         </form> </td>
-        <td><form class = "form22" >
-        <a href="deletepatient.php?pid='.$row["Patient_id"].'"  style="padding:5px; margin-left:20px; background-color:red; color:white;"  id="but">Delete</a>
-    </form> </td>
+        <td>
+        <button data-link = "deletepatient.php?pid='.$row["Patient_id"].'"  style="padding:5px; margin-left:20px; background-color:red; color:white;"  id="butt">Delete</button>
+    </td>
     </tr>
         ';
         $n++;
@@ -124,5 +126,15 @@ if ($result->num_rows > 0){
 
    </div>     
     </section>
+    <script>
+        document.getElementById("butt").addEventListener("click", function(){
+           Confirm =  confirm("Are you sure you want to  delete this user");
+           if(Confirm == true){
+                window.location.href = document.getElementById("butt").getAttribute('data-link');
+           } else {
+
+           }
+        })
+    </script>
 </body>
 </html>

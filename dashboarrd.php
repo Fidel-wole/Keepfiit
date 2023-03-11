@@ -78,7 +78,8 @@ if ($result->num_rows > 0){
     
     ?>
 
-   </div>     
+   </div>  
+   <p style="position:absolute; margin-top: 21%;margin-left:10%;">Copyright &copy; <script>document.write((new Date).getFullYear())</script> by Fidel @ Qudroid System</p>   
     </section>
 
     <!-- <script>

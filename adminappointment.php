@@ -125,7 +125,7 @@ if ($result->num_rows > 0){
         <td>'.$row["Appointment_Day"].'</td>
         <td><form class = "form22">
             <a href="updatestatus.php?pid='.$row["Patient_id"].'" class = '. $row["Appointment_Status"] . ' id="but", onclick ="click()">
-            Change Status</a>
+            Approve</a>
         </form> </td>
 
     </tr>
